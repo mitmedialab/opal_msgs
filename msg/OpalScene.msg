@@ -6,7 +6,3 @@ string background
 
 # array of objects present in the scene
 SceneObject[] objects 
-
-# time of action
-time timestamp
-

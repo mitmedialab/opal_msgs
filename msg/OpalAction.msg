@@ -9,7 +9,3 @@ string action
 
 # (x, y, z) position where the object was when this action occurred
 float32[3] position 
-
-# time of action
-time timestamp
-
