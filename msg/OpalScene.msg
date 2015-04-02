@@ -5,4 +5,8 @@
 string background
 
 # array of objects present in the scene
-SceneObject[] objects 
+# each string is a JSON string with the properties of the object
+# these should be the same properties that are send when we load an
+# object with an OpalCommand load object message - i.e., name, tag,
+# position, scale, etc.
+string[] objects 
