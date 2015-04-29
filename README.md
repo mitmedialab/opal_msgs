@@ -23,6 +23,10 @@ The OpalCommand message definition includes constants for the different commands
     string name of object to highlight
 - 9 request keyframe
     no properties
+- 10 fade screen
+    no properties
+- 11 unfade screen
+    no properties
 
 Some commands should be accompanied by a set of properties. For example, if you send the command "sidekick say", the properties field should contain a string that is the speech the sidekick should say. If you send the command "load object", the properties should be a JSON string of the object-to-load's properties (e.g., name, tag, initial position). 
 
