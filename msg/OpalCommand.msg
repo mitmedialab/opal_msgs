@@ -22,6 +22,8 @@ int8 HIGHLIGHT_OBJECT = 8
 int8 REQUEST_KEYFRAME = 9
 int8 FADE_SCREEN = 10
 int8 UNFADE_SCREEN = 11
+int8 NEXT_PAGE = 12
+int8 PREV_PAGE = 13
 
 # Sidekick animations
 string ANIM_SPEAK = "BeakOpenClose" 

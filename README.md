@@ -3,29 +3,33 @@ A ROS package containing custom ROS messages for communication with the SAR Opal
 
 ## OpalCommand
 The OpalCommand message definition includes constants for the different commands that can be sent to the tablet. Each command is an int32. Some commands must be accompanied by a JSON string that is a set of properties relevant to the command, such as the name of the object to move and where to move it to. 
-- 0 reset scene
+- 0 reset scene: 
     no properties (properties = null)
-- 1 disable touch
+- 1 disable touch: 
     no properties
-- 2 enable touch
+- 2 enable touch: 
     no properties
-- 3 sidekick do
+- 3 sidekick do: 
     string name of action to do, use the provided constants
-- 4 sidekick say
+- 4 sidekick say: 
     string name of audio to play, assumes .wav file extension
-- 5 load object
+- 5 load object: 
     JSON object with relevant properties, see below
-- 6 clear scene
+- 6 clear scene: 
     no properties
-- 7 move object
+- 7 move object: 
     JSON object with relevant properties, see below
-- 8 highlight object
+- 8 highlight object: 
     string name of object to highlight
-- 9 request keyframe
+- 9 request keyframe: 
     no properties
-- 10 fade screen
+- 10 fade screen: 
     no properties
-- 11 unfade screen
+- 11 unfade screen: 
+    no properties
+- 12 next page: 
+    no properties
+- 13 previous page: 
     no properties
 
 Some commands should be accompanied by a set of properties. For example, if you send the command "sidekick say", the properties field should contain a string that is the speech the sidekick should say. If you send the command "load object", the properties should be a JSON string of the object-to-load's properties (e.g., name, tag, initial position). 
