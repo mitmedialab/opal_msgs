@@ -121,7 +121,7 @@ If you want to specify which object to move, you would specify the name of the o
 ### Set correct JSON properties
 If you want to specify which objects are "correct" or "incorrect" answer responses, you would specify the names of the objects that should be marked correct or incorrect:
 > {
->       "correct":"dragon",
+>       "correct":["dragon"],
 >       "incorrect":["ball1","cat"]
 > }
 
