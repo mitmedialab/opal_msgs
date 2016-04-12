@@ -24,6 +24,10 @@ int8 FADE_SCREEN = 10
 int8 UNFADE_SCREEN = 11
 int8 NEXT_PAGE = 12
 int8 PREV_PAGE = 13
+int8 EXIT = 15
+int8 SET_CORRECT = 16
+int8 SHOW_CORRECT = 17
+int8 HIDE_CORRECT = 18
 
 # Sidekick animations
 string ANIM_SPEAK = "BeakOpenClose" 
