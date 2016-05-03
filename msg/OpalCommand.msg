@@ -28,6 +28,7 @@ int8 EXIT = 14
 int8 SET_CORRECT = 15
 int8 SHOW_CORRECT = 16
 int8 HIDE_CORRECT = 17
+int8 SETUP_STORY_SCENE = 18
 
 # Sidekick animations
 string ANIM_SPEAK = "BeakOpenClose" 

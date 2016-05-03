@@ -76,6 +76,10 @@ The OpalCommand message definition includes constants for the different commands
     - no properties
     - hides all "correct" and "incorrect" visual feedback for all objects tagged correct or incorrect
 
+- 18 setup story scene:
+    -JSON object with relevant properties, see below
+    - in a social stories game, sets up the initial game scene that the story scenes are loaded into
+
 Some commands should be accompanied by a set of properties. For example, if you
 send the command "sidekick say", the properties field should contain a
 string that is the speech the sidekick should say. If you send the command
@@ -124,6 +128,20 @@ If you want to specify which objects are "correct" or "incorrect" answer respons
 >       "correct":["dragon"],
 >       "incorrect":["ball1","cat"]
 > }
+
+### Setup Story Scene JSON properties
+
+If you want to set up a social stories game scene, you specify the number of
+scenes in the story, whether the scenes will be presented in order or not, and
+the number of answer options available when questions are asked about the
+story. For example:
+
+> {
+>       "numScenes":"4",
+>       "scenesInOrder":true,
+>       "numAnswers":"4"
+> }
+
 
 ## OpalAction
 
