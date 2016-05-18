@@ -149,11 +149,11 @@ loaded into particular scene or answer slots, you would use the following
 properties. This example would load the graphic named "scene1" as a playobject that is not draggable into the first scene slot:
 
 > { 
->   "name": "scene1",
->   "tag": "PlayObject",
->   "draggable": "false",
->   "slot": "1",
->   "isAnswerSlot": "false"
+>    "name": "scene1",
+>    "tag": "PlayObject",
+>    "draggable": "false",
+>    "slot": "1",
+>    "isAnswerSlot": "false"
 > }
 
 In some versions of the social stories game, the story scenes may be presented
@@ -162,12 +162,12 @@ example of loading an out of order draggable scene graphic named "scene1" into
 the second scene slot:
 
 > { 
->   "name": "scene1",
->   "tag": "PlayObject",
->   "draggable": "true",
->   "slot": "2",
->   "isAnswerSlot": "false",
->   "correctSlot": "1"
+>    "name": "scene1",
+>    "tag": "PlayObject",
+>    "draggable": "true",
+>    "slot": "2",
+>    "isAnswerSlot": "false",
+>    "correctSlot": "1"
 > }
 
 When loading graphics for answer slots for a social stories game, you should
@@ -177,12 +177,12 @@ correct, incorrect, or neither, both flags exist. Both flags default to
 "false".
 
 > { 
->   "name": "answer1",
->   "tag": "PlayObject",
->   "draggable": "false",
->   "slot": "1",
->   "isAnswerSlot": "true",
->   "isCorrect": "true"
+>    "name": "answer1",
+>    "tag": "PlayObject",
+>    "draggable": "false",
+>    "slot": "1",
+>    "isAnswerSlot": "true",
+>    "isCorrect": "true"
 > }
 
 
@@ -192,8 +192,8 @@ If you want to specify which object to move, you would specify the name of the
 object to move and where to move it to:
 
 > {
->     "name": "dragon",
->     "moveTo": ["100","200","0"]
+>    "name": "dragon",
+>    "moveTo": ["100","200","0"]
 > }
 
 ### Set correct JSON properties
@@ -203,8 +203,8 @@ responses, you would specify the names of the objects that should be marked
 correct or incorrect:
 
 > {
->       "correct":["dragon"],
->       "incorrect":["ball1","cat"]
+>    "correct":["dragon"],
+>    "incorrect":["ball1","cat"]
 > }
 
 ### Setup Story Scene JSON properties
@@ -215,9 +215,9 @@ the number of answer options available when questions are asked about the
 story. For example:
 
 > {
->       "numScenes":"4",
->       "scenesInOrder":true,
->       "numAnswers":"4"
+>    "numScenes":"4",
+>    "scenesInOrder":true,
+>    "numAnswers":"4"
 > }
 
 
