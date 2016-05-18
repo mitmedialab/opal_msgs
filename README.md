@@ -89,7 +89,33 @@ object-to-load's properties (e.g., name, tag, initial position).
 See the ROS package [sar\_opal\_sender] (https://github.com/personal-robots/sar_opal_sender "sar opal sender") for an example of how to send different commands. 
 
 ### Load object JSON properties 
-The properties should be a JSON string with the relevant properties for the object to load, move, or highlight. For example, if you want to load the "dragon" image as a draggable PlayObject, with the audio file "chimes" attached (so that "chimes" plays whenever you tap the object), and you want this object to be created at \(0,0,0\) in the tablet screen world, you would write:
+
+The properties should be a JSON string with the relevant properties for the
+object to load, move, or highlight. Available properties for loading objects include:
+
+- name (string, default "")
+- tag (string, default "")
+- draggable (bool, default true)
+- position (Vector3, default 0,0,0)
+- scale (Vector3, default 1,1,1)
+- audioFile (string, default null)
+- slot (int, default -1)
+- isAnswerSlot (bool, default false)
+- correctSlot (int, default -1)
+- isCorrect (bool, default false)
+- isIncorrect (bool, default false)
+
+Depending on what kind of object is being loaded, some property fields may be
+ignored. For example, if you are not loading an object for a social stories
+game, the properties slot, isAnswerSlot, correctSlot, isCorrect, and
+isIncorrect will all be ignored. If you are loading a graphic that has the tag
+"Background", only the name and tag fields are used.
+
+For example, if you want to load the "dragon" image as a draggable PlayObject,
+with the audio file "chimes" attached (so that "chimes" plays whenever you tap
+the object), and you want this object to be created at \(0,0,0\) in the game
+screen world, at a scale of \(100,100,100\), you would write:
+
 > {  
 >    "name": "dragon",  
 >    "tag": "PlayObject",  
@@ -100,6 +126,7 @@ The properties should be a JSON string with the relevant properties for the obje
 > }
 
 Here is another example:
+
 > {  
 >    "name": "ball1",  
 >    "tag": "PlayObject",  
@@ -109,21 +136,72 @@ Here is another example:
 >    "scale": ["100","100","100"]
 > }
 
-If you want to load a background image instead of a draggable object, you would specify just the name of the image and the tag:
+If you want to load a background image instead of a draggable object, you would
+specify just the name of the image and the tag:
+
 > {  
 >    "name": "playground",  
 >    "tag": "Background"  
 > }  
 
+If you are loading objects as part of a social stories game, where graphics get
+loaded into particular scene or answer slots, you would use the following
+properties. This example would load the graphic named "scene1" as a playobject that is not draggable into the first scene slot:
+
+> { 
+>   "name": "scene1",
+>   "tag": "PlayObject",
+>   "draggable": "false",
+>   "slot": "1",
+>   "isAnswerSlot": "false"
+> }
+
+In some versions of the social stories game, the story scenes may be presented
+out of order, with the user required to drag them back into order. Here's an
+example of loading an out of order draggable scene graphic named "scene1" into
+the second scene slot:
+
+> { 
+>   "name": "scene1",
+>   "tag": "PlayObject",
+>   "draggable": "true",
+>   "slot": "2",
+>   "isAnswerSlot": "false",
+>   "correctSlot": "1"
+> }
+
+When loading graphics for answer slots for a social stories game, you should
+use the following properties to indicate whether it is a correct answer or not
+using the "isCorrect" or "isIncorrect" flags. Since objects can be either
+correct, incorrect, or neither, both flags exist. Both flags default to
+"false".
+
+> { 
+>   "name": "answer1",
+>   "tag": "PlayObject",
+>   "draggable": "false",
+>   "slot": "1",
+>   "isAnswerSlot": "true",
+>   "isCorrect": "true"
+> }
+
+
 ### Move object JSON properties
-If you want to specify which object to move, you would specify the name of the object to move and where to move it to:
+
+If you want to specify which object to move, you would specify the name of the
+object to move and where to move it to:
+
 > {
 >     "name": "dragon",
 >     "moveTo": ["100","200","0"]
 > }
 
 ### Set correct JSON properties
-If you want to specify which objects are "correct" or "incorrect" answer responses, you would specify the names of the objects that should be marked correct or incorrect:
+
+If you want to specify which objects are "correct" or "incorrect" answer
+responses, you would specify the names of the objects that should be marked
+correct or incorrect:
+
 > {
 >       "correct":["dragon"],
 >       "incorrect":["ball1","cat"]
