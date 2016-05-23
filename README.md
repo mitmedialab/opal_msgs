@@ -224,13 +224,14 @@ story. For example:
 ## OpalAction
 
 The OpalAction message is sent from a SAR opal game whenever actions occur in the
-game. It's essentially a log message. It includes five fields:
+game. It's essentially a log message. It includes six fields:
 
 - action
 - objectName
 - objectTwoName
 - position
 - positionTwo
+- message
 
 Some actions refer to specific objects and take place in specific positions in
 the game scene (e.g., a tap takes place in a specific location and is
@@ -259,6 +260,11 @@ modify this message definition whenever they want to log a new action. That
 said, we strongly encourage anyone who changes the types of actions sent to
 update this file with the current list, since anyone receiving OpalAction
 messages will likely want to do different things based on the action type.
+
+The message field is used to provide additional information about the action
+that occurred, such as whether it is a correct or incorrect action (based on
+the flags in the object's saved properties). This field should be an empty
+string if no additional information is required.
 
 ## OpalScene
 
