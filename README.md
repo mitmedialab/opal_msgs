@@ -77,7 +77,7 @@ The OpalCommand message definition includes constants for the different commands
     - hides all "correct" and "incorrect" visual feedback for all objects tagged correct or incorrect
 
 - 18 setup story scene:
-    -JSON object with relevant properties, see below
+    - JSON object with relevant properties, see below
     - in a social stories game, sets up the initial game scene that the story scenes are loaded into
 
 Some commands should be accompanied by a set of properties. For example, if you
@@ -223,17 +223,42 @@ story. For example:
 
 ## OpalAction
 
-The OpalAction message is sent from the tablet whenever actions occur on the
-tablet. It's essentially a log message. The action types that are currently
-sent from the tablet include:
+The OpalAction message is sent from a SAR opal game whenever actions occur in the
+game. It's essentially a log message. It includes five fields:
+
+- action
+- objectName
+- objectTwoName
+- position
+- positionTwo
+
+Some actions refer to specific objects and take place in specific positions in
+the game scene (e.g., a tap takes place in a specific location and is
+registered by a specific game object). Some actions involve two separate
+objects (e.g., collisions). When a field is not required, it will be an empty
+string (e.g., a tap action involves only one object, so the objectTwoName and
+positionTwo will be empty strings).
+
+The action types that are currently sent include:
 
 - tap
-- press
+- press \(i.e., any touch\)
 - release
 - pan \(i.e., drag\)
-- pan complete
+- pancomplete \(i.e., drag end \)
+- collide
+- collideEnd
 
-Note that these actions are only what the tablet sends right now (see [SAR\-opal\-base] (https://github.com/personal-robots/SAR-opal-base "sar opal base"). This could change. Although we could define a set of constants for the types of actions that be sent (i.e., a set of string action types), because the tablet could theoretically send a bunch of different actions beyond what is currently sent, we don't want to require whoever rights tablet code to also modify this message definition whenever they want to log a new action.
+Note that these actions are only what SAR opal games send right now (see
+[SAR\-opal\-base] (https://github.com/personal-robots/SAR-opal-base "sar opal
+base")). This could change. Although we could define a set of constants for the
+types of actions that be sent (i.e., a set of string action types), because the
+game could theoretically send a bunch of different actions beyond what is
+currently sent, we don't want to require whoever writes game code to also
+modify this message definition whenever they want to log a new action. That
+said, we strongly encourage anyone who changes the types of actions sent to
+update this file with the current list, since anyone receiving OpalAction
+messages will likely want to do different things based on the action type.
 
 ## OpalScene
 
