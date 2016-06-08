@@ -1,4 +1,5 @@
 # Message for logging actions that have occurred on the SAR Opal tablet app
+Header header
 
 # Name of the object on which the action occurred
 # or an empty string if no object

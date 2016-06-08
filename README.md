@@ -1,8 +1,10 @@
 # sar\_opal\_msgs
-A ROS package containing custom ROS messages for communication with the SAR Opal tablet app
+A ROS package containing custom ROS messages for communication with a SAR Opal game.
 
 ## OpalCommand
-The OpalCommand message definition includes constants for the different commands that can be sent to the tablet. Each command is an int8. Some commands must be accompanied by a JSON string that is a set of properties relevant to the command, such as the name of the object to move and where to move it to. 
+The OpalCommand message definition contains a standard ROS message header, a command to send, and (for some commands) properties relevant to the command.  
+
+Constants are provided for the different commands that can be sent to the tablet. Each command is an int8. Some commands must be accompanied by a JSON string that is a set of properties relevant to the command, such as the name of the object to move and where to move it to, as follows: 
 
 - 0 reset scene: 
    - no properties (properties = null)

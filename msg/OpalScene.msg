@@ -1,5 +1,6 @@
 # Message for logging the entire state of the scene in
 # the SAR Opal tablet app
+Header header
 
 # array of objects present in the scene
 # each string is a JSON string with the properties of the object
