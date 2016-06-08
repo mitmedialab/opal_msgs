@@ -1,4 +1,5 @@
 # Message for requesting actions from the SAR Opal tablet app
+Header header
 
 int8 command # which command will be sent
 
