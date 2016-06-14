@@ -277,3 +277,16 @@ the scene. Each string in the array is the JSON configuration of the object,
 which includes all the information needed to reload that object later (i.e.,
 name, tag, position, scale, which audio file is attached, whether the object is
 draggable).
+
+## Version and dependency notes
+
+This node was built and tested with:
+
+- Python 2.7.6
+- ROS Indigo
+- Ubuntu 14.04 LTS (64-bit)
+
+## Bugs and issues
+
+Please report all bugs and issues on the [sar\_opal\_msgs github issues
+page](https://github.com/personal-robots/sar_opal_msgs/issues).
