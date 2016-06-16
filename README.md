@@ -24,15 +24,18 @@ Constants are provided for the different commands that can be sent to the tablet
 
 - 4 sidekick say: 
    - string name of audio to play, assumes .wav file extension
-   - plays about an audio clip while the sidekick character plays a talking animation
+   - plays about an audio clip while the sidekick character plays a talking
+     animation
 
 - 5 load object: 
     - JSON object with relevant properties, see below
     - adds a graphic object to the scene
 
 - 6 clear scene: 
-    - no properties
-    - removes all objects from the scene
+    - no properties OR a string name of the type of objects to clear
+    - if no properties, removes all objects from the scene
+    - if a string is provided, it is used to determine which objects to remove
+      from the scene
 
 - 7 move object: 
     - JSON object with relevant properties, see below
@@ -68,19 +71,23 @@ Constants are provided for the different commands that can be sent to the tablet
 
 - 15 set correct:
     - JSON object with relevant properties, see below
-    - in a social stories game, indicates which story scenes or answers are correct or incorrect responses for questions that may be asked
+    - in a social stories game, indicates which story scenes or answers are
+      correct or incorrect responses for questions that may be asked
 
 - 16 show correct:
     - no properties
-    - shows "correct" and "incorrect" visual feedback for all objects tagged correct or incorrect
+    - shows "correct" and "incorrect" visual feedback for all objects tagged
+      correct or incorrect
 
 - 17 hide correct:
     - no properties
-    - hides all "correct" and "incorrect" visual feedback for all objects tagged correct or incorrect
+    - hides all "correct" and "incorrect" visual feedback for all objects
+      tagged correct or incorrect
 
 - 18 setup story scene:
     - JSON object with relevant properties, see below
-    - in a social stories game, sets up the initial game scene that the story scenes are loaded into
+    - in a social stories game, sets up the initial game scene that the story
+      scenes are loaded into
 
 Some commands should be accompanied by a set of properties. For example, if you
 send the command "sidekick say", the properties field should contain a
