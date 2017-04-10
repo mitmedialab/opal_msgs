@@ -30,8 +30,11 @@ int8 SET_CORRECT = 15
 int8 SHOW_CORRECT = 16
 int8 HIDE_CORRECT = 17
 int8 SETUP_STORY_SCENE = 18
+int8 STORY_SELECTION=19
 
 # Sidekick animations
 string ANIM_SPEAK = "BeakOpenClose" 
 string ANIM_FLAP = "FlapWings"
 string ANIM_FLAP_BEAKOPEN = "FlapBeakOpen"
+
+ 
