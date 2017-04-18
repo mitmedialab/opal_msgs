@@ -88,6 +88,18 @@ Constants are provided for the different commands that can be sent to the tablet
     - JSON object with relevant properties, see below
     - in a social stories game, sets up the initial game scene that the story
       scenes are loaded into
+      
+ - 19 story selection 
+    - story name for storytelling app
+    
+ - 20 same page
+    - stay on the same page
+    
+ - 21 show flip buttons
+     - show flip buttons for the storytelling app
+     
+ - 22 hide flip buttons
+     - hide flip buttons for the storytelling app
 
 Some commands should be accompanied by a set of properties. For example, if you
 send the command "sidekick say", the properties field should contain a
