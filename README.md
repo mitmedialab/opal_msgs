@@ -1,6 +1,12 @@
 # sar\_opal\_msgs
 A ROS package containing custom ROS messages for communication with a SAR Opal game.
 
+## OpalStorybook
+ROS message for storytelling app
+
+## OpalSpeechResult
+ROS message for syllable-based speech pronunciation accuracy
+
 ## OpalCommand
 The OpalCommand message definition contains a standard ROS message header, a command to send, and (for some commands) properties relevant to the command.  
 
