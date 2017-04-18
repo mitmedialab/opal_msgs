@@ -17,6 +17,8 @@ find_package(catkin REQUIRED COMPONENTS
    OpalCommand.msg
    OpalAction.msg
    OpalScene.msg
+   OpalSpeechResult.msg
+   OpalStorybook.msg
  )
 
 ## Generate added messages and services with any dependencies listed here
