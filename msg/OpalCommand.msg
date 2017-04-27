@@ -34,6 +34,7 @@ int8 STORY_SELECTION=19
 int8 SAME_PAGE=20
 int8 STORY_SHOW_BUTTONS=21
 int8 STORY_HIDE_BUTTONS=22
+int8 STORY_GO_TO_PAGE=23
 
 # Sidekick animations
 string ANIM_SPEAK = "BeakOpenClose" 
