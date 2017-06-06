@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+lcmake_minimum_required(VERSION 2.8.3)
 project(sar_opal_msgs)
 
 ## Find catkin macros and libraries, and other catkin packages
@@ -14,8 +14,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
+   iSpyAction.msg
    OpalCommand.msg
-   OpalAction.msg
    OpalScene.msg
    OpalSpeechResult.msg
    OpalStorybook.msg
