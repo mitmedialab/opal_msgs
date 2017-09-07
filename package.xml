@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package>
   <name>sar_opal_msgs</name>
-  <version>4.0.0</version>
-  <description>SAR Opal project messages for Unity tablet game and ROS communication</description>
+  <version>5.0.0</version>
+  <description>ROS messages for Opal game and ROS communication</description>
 
   <maintainer email="jakory@media.mit.edu">jakory</maintainer>
   <license>MIT</license>
-  <url type="website">https://github.com/personal-robots/sar-opal-msgs</url>
+  <url type="website">https://github.com/mitmedialab/sar-opal-msgs</url>
   <author email="jakory@media.mit.edu">jakory</author>
 
   <buildtool_depend>catkin</buildtool_depend>
