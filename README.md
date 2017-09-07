@@ -1,4 +1,4 @@
-# sar\_opal\_msgs
+# opal\_msgs
 
 A ROS package containing custom ROS messages for communication with an Opal
 game.
@@ -114,8 +114,8 @@ that is the speech the sidekick should say. If you send the command "load
 object", the properties should be a JSON string of the object-to-load's
 properties (e.g., name, tag, initial position).
 
-See the ROS package [sar\_opal\_sender]
-(https://github.com/personal-robots/sar_opal_sender "sar opal sender") for an
+See the ROS package
+[sar\_opal\_sender](https://github.com/mitmedialab/sar_opal_sender") for an
 example of how to send different commands.
 
 ### Load object JSON properties
@@ -253,7 +253,7 @@ story. For example:
 
 ## OpalAction
 
-The OpalAction message is sent from a SAR opal game whenever actions occur in
+The OpalAction message is sent from an Opal game whenever actions occur in
 the game. It's essentially a log message. It includes six fields:
 
 - action
@@ -280,8 +280,8 @@ The action types that are currently sent include:
 - collide
 - collideEnd
 
-Note that these actions are only what SAR opal games send right now (see
-[SAR\-opal\-base] (https://github.com/personal-robots/SAR-opal-base "sar opal
+Note that these actions are only what Opal games send right now (see
+[SAR\-opal\-base] (https://github.com/mitmedialab/SAR-opal-base "sar opal
 base")). This could change. Although we could define a set of constants for the
 types of actions that be sent (i.e., a set of string action types), because the
 game could theoretically send a bunch of different actions beyond what is
@@ -324,5 +324,5 @@ This node was built and tested with:
 
 ## Bugs and issues
 
-Please report all bugs and issues on the [sar\_opal\_msgs github issues
-page](https://github.com/personal-robots/sar_opal_msgs/issues).
+Please report all bugs and issues on the [opal\_msgs github issues
+page](https://github.com/mitmedialab/opal_msgs/issues).
