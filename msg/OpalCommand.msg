@@ -1,16 +1,19 @@
-# Message for requesting actions from the SAR Opal tablet app
+# Message for requesting actions from a SAR Opal game.
+
+# Standard ROS header.
 Header header
 
-int8 command # which command will be sent
+# The command to send. Use the constants defined below.
+int8 command
 
-# properties of command, such as:
+# The properties of the command, such as:
 #   string name of action for sidekick to do (use constants below)
 #   string name of sound for sidekick to play
 #   json string that is the set of properties of the object to load
 #   null if no extra properties needed
-string properties 
+string properties
 
-# Commands
+# Commands.
 int8 RESET = 0
 int8 DISABLE_TOUCH = 1
 int8 ENABLE_TOUCH = 2
@@ -30,15 +33,13 @@ int8 SET_CORRECT = 15
 int8 SHOW_CORRECT = 16
 int8 HIDE_CORRECT = 17
 int8 SETUP_STORY_SCENE = 18
-int8 STORY_SELECTION=19
-int8 SAME_PAGE=20
-int8 STORY_SHOW_BUTTONS=21
-int8 STORY_HIDE_BUTTONS=22
-int8 STORY_GO_TO_PAGE=23
+int8 STORY_SELECTION = 19
+int8 SAME_PAGE = 20
+int8 STORY_SHOW_BUTTONS = 21
+int8 STORY_HIDE_BUTTONS = 22
+int8 STORY_GO_TO_PAGE = 23
 
-# Sidekick animations
-string ANIM_SPEAK = "BeakOpenClose" 
+# Sidekick animations.
+string ANIM_SPEAK = "BeakOpenClose"
 string ANIM_FLAP = "FlapWings"
 string ANIM_FLAP_BEAKOPEN = "FlapBeakOpen"
-
- 
