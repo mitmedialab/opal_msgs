@@ -97,16 +97,24 @@ the object to move and where to move it to, as follows:
       scenes are loaded into
 
  - 19 story selection
-    - story name for storytelling app
+    - string name of the story
+    - load the specified storybook
 
  - 20 same page
-    - stay on the same page
+    - no properties
+    - stay on the same page in a storybook
 
  - 21 show flip buttons
-     - show flip buttons for the storytelling app
+    - no properties
+    - show flip/arrow buttons for a storybook
 
  - 22 hide flip buttons
-     - hide flip buttons for the storytelling app
+    - no properties
+    - hide flip buttons for a storybook
+
+ - 23 go to story page
+    - int page number
+    - go to a specific page in the a storybook
 
 Some commands should be accompanied by a set of properties. For example, if you
 send the command "sidekick say", the properties field should contain a string
